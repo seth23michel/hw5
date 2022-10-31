@@ -7,8 +7,6 @@ Define a printStructure function.
 Define an insert function.
 Test the above functions and the Node class.
 """
-import collections
-
 from node import Node
 
 
