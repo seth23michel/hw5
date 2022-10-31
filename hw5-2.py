@@ -1,13 +1,13 @@
 def mergeSort(numList):
     if len(numList) > 1:
-        mid = len(numList) // 2     #establish middle of the list
-        leftList = numList[:mid]    #establish two new lists that are seperated from the middle to be sorted
-        rightList = numList[mid:]   
+        mid = len(numList) // 2  # establish middle of the list
+        leftList = numList[:mid]  # establish two new lists that are seperated from the middle to be sorted
+        rightList = numList[mid:]
 
-        mergeSort(leftList)     #applies mergesort to left lists
-        mergeSort(rightList)    #applies mergesort to right lists
+        mergeSort(leftList)  # applies mergesort to left lists
+        mergeSort(rightList)  # applies mergesort to right lists
         i = j = k = 0
-        while i < len(leftList) and j < len(rightList):     
+        while i < len(leftList) and j < len(rightList):
             if leftList[i] < rightList[j]:
                 numList[k] = leftList[i]
                 i = i + 1
@@ -16,7 +16,7 @@ def mergeSort(numList):
                 j = j + 1
             k = k + 1
 
-        while i < len(leftList):        #while loops that iterate through their respective lists at each side
+        while i < len(leftList):  # while loops that iterate through their respective lists at each side
             numList[k] = leftList[i]
             i = i + 1
             k = k + 1
@@ -30,9 +30,9 @@ def mergeSort(numList):
 def main():
     with open('hw5-2.txt', 'r') as hw5_file:
         numList = list(map(int, hw5_file.read().split(' ')))
-    print(numList)      #prints unsorted list
-    mergeSort(numList)  #sorts the list via MergeSort
-    print(numList)      #prints the newly sorted list
+    print(numList)  # prints unsorted list
+    mergeSort(numList)  # sorts the list via MergeSort
+    print(numList)  # prints the newly sorted list
 
 
 if __name__ == '__main__':
