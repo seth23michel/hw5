@@ -52,7 +52,7 @@ def orderLinkedList(head):
     while temp:
         tempList.append(temp.data)
         temp = temp.next
-    tempList.sort()
+    tempList.sort(key=str.lower)
 
     for element in tempList:
         head.data = element
