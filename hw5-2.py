@@ -20,12 +20,12 @@ def mergeSort(numList): #this function will be called after printing out the uns
                 j += 1
             k += 1
 
-        while i < len(leftList):  # while loops that iterate through the left of the midpoint we established
+        while i < len(leftList):  # while loops that iterate through the left of the middle we established
             numList[k] = leftList[i]
             i += 1
             k += 1
 
-        while j < len(rightList):   # while loops that iterates through the right side of the midpoint
+        while j < len(rightList):   # while loops that iterates through the right side of the middle we established
             numList[k] = rightList[j]
             j += 1
             k += 1
