@@ -1,6 +1,6 @@
 from a5 import insert, printStructure
 
-def mergeSort(numList):
+def mergeSort(numList): #this function will be called after printing out the unsorted list first
     if len(numList) > 1:
         midIndex = len(numList) // 2  # establish middle of the list (if list even then is picks left most index)
         leftList = numList[:midIndex]  # establish two new lists that are seperated from the middle to be sorted
