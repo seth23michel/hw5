@@ -1,3 +1,6 @@
+# Seth Michel U05202326
+# Dillon Mathew U76212871
+
 from a5 import insert, printStructure
 
 def mergeSort(numList): #this function will be called after printing out the unsorted list first
