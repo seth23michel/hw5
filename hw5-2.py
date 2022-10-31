@@ -2,31 +2,33 @@ from a5 import insert, printStructure
 
 def mergeSort(numList):
     if len(numList) > 1:
-        mid = len(numList) // 2  # establish middle of the list
-        leftList = numList[:mid]  # establish two new lists that are seperated from the middle to be sorted
-        rightList = numList[mid:]
+        midIndex = len(numList) // 2  # establish middle of the list (if list even then is picks left most index)
+        leftList = numList[:midIndex]  # establish two new lists that are seperated from the middle to be sorted
+        rightList = numList[midIndex:]
 
         mergeSort(leftList)  # applies mergesort to left lists
         mergeSort(rightList)  # applies mergesort to right lists
-        i = j = k = 0
+        i = 0
+        j = 0
+        k = 0
         while i < len(leftList) and j < len(rightList):
             if leftList[i] < rightList[j]:
                 numList[k] = leftList[i]
-                i = i + 1
+                i += 1
             else:
                 numList[k] = rightList[j]
-                j = j + 1
-            k = k + 1
+                j += 1
+            k += 1
 
         while i < len(leftList):  # while loops that iterate through their respective lists at each side
             numList[k] = leftList[i]
-            i = i + 1
-            k = k + 1
+            i += 1
+            k += 1
 
         while j < len(rightList):
             numList[k] = rightList[j]
-            j = j + 1
-            k = k + 1
+            j += 1
+            k += 1
 
 
 def main():
